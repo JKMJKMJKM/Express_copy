@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express - Node.js web application framework</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--title bar-->
+
+  <div class="container-fluid bg-dark fixed-top">
+    <p class="text-light text-center p-0 b-0 m-0">Black Lives Matter.</p>
+    <p class="text-primary text-center p-0 b-0 m-0 ">Support the Equal Justice Initiative.</p>
+  </div>
+
+<!--nav bar-->
+
+  <div class="container-fluid pt-5 ps-0 pe-0">
+  <nav class="navbar navbar-expand-lg bg-light">
+
+    <a class="navbar-brand ms-1" href="#">Express</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mx-auto">
+        <form class="d-flex" role="search ">
+          <input class="form-control me-2" type="search" placeholder="🔎 search" aria-label="Search">
+        </form>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home </a>
+        </li>
+     
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#"role="button" data-bs-toggle="dropdown" aria-expanded="false" id="abc-001"> Getting started </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Installing</a></li>
+              <li><a class="dropdown-item" href="#">Hello world</a></li>
+              <li><a class="dropdown-item" href="#">Express generator</a></li>
+              <li><a class="dropdown-item" href="#">Basic routing</a></li>
+              <li><a class="dropdown-item" href="#">Static files</a></li>
+              <li><a class="dropdown-item" href="#">More examples</a></li>
+              <li><a class="dropdown-item" href="#">FAQ</a></li>
+            </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#"role="button" data-bs-toggle="dropdown" aria-expanded="false" id="abc-002"> Guide </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Routing</a></li>
+                <li><a class="dropdown-item" href="#">Writing middleware</a></li>
+                <li><a class="dropdown-item" href="#">Using middleware</a></li>
+                <li><a class="dropdown-item" href="#">Overriding the Express API</a></li>
+                <li><a class="dropdown-item" href="#">Using Template Engines</a></li>
+                <li><a class="dropdown-item" href="#">Error handling</a></li>
+                <li><a class="dropdown-item" href="#">Debugging</a></li>
+                <li><a class="dropdown-item" href="#">Express behind proxies</a></li>
+                <li><a class="dropdown-item" href="#">Moving to express 4</a></li>
+                <li><a class="dropdown-item" href="#">Moving to express 5</a></li>
+                <li><a class="dropdown-item" href="#">Database integration</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#"role="button" data-bs-toggle="dropdown" aria-expanded="false" id="abc-003"> API reference </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Routing</a></li>
+              <li><a class="dropdown-item" href="#">5.x(beta)</a></li>
+              <li><a class="dropdown-item" href="#">4.x</a></li>
+              <li><a class="dropdown-item" href="#">3.x (deprecated)</a></li>
+              <li><a class="dropdown-item" href="#">2.x (deprecated)</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#"role="button" data-bs-toggle="dropdown" aria-expanded="false" id="abc-004"> Advanced topic </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Template engines</a></li>
+              <li><a class="dropdown-item" href="#">Process managers </a></li>
+              <li><a class="dropdown-item" href="#">Security updates</a></li>
+              <li><a class="dropdown-item" href="#">Security best practices</a></li>
+              <li><a class="dropdown-item" href="#">Performance best practices</a></li>
+              <li><a class="dropdown-item" href="#">Health check and gracefull <br>shutdown</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#"role="button" data-bs-toggle="dropdown" aria-expanded="false" id="abc-005"> Resources </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Community</a></li>
+              <li><a class="dropdown-item" href="#">Glossary</a></li>
+              <li><a class="dropdown-item" href="#">Template Engines</a></li>
+              <li><a class="dropdown-item" href="#">Middleware</a></li>
+              <li><a class="dropdown-item" href="#">Utility modules</a></li>
+              <li><a class="dropdown-item" href="#">Frameworks</a></li>
+              <li><a class="dropdown-item" href="#">Companies using Express</a></li>
+              <li><a class="dropdown-item" href="#">Open source-project</a></li>
+              <li><a class="dropdown-item" href="#">Additional lerning </a></li>
+              <li><a class="dropdown-item" href="#">contrebuting to express </a></li>
+              <li><a class="dropdown-item" href="#">Relese Change Log </a></li>
+            </ul>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  </div>  
+<!--body-->
+
+  <div class="container  pt-5 mt-5 ms-3">
+    <h1 class="display-4 d-none d-md-block">Express</h1>
+  </div>
+
+  <div class="container ms-3">
+    <div class="row">
+      <h1 class="display-4 col-md-7">
+      <small class="text-muted">Fast, unopinionated, minimalist web framework for <a class="text-decoration-none">Node.js</a></small>
+      </h1>
+    </div>
+  </div>
+
+<!--body square-->
+  <div class="border border-dark p-2 ms-3 mt-5 col-md-4 border-opacity-10 d-none d-md-block">
+    <p class="mb-0">$ npm install express --save </p>
+  </div>
+
+<!--body square 2 -->
+
+  <div id="abcd"  class=" container border border-warning p-2 ms-3 mt-5 col-9 border-opacity-10 ">
+    <p class="mb-0 fw-bold">Express 5.0 beta documentation is now available. </p>
+    <p class="mb-0">The beta <a class="text-decoration-none">API documentation</a> is a work in progress. For information on what’s in the release, see the Express <a class="text-decoration-none">release history. </a></p>
+  </div>
+
+<!--cards -->
+
+  <div class="row container mx-auto mt-5">
+    <div class="col-md-4 col-lg-3 col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">Web Applications</h5>
+          <p class="card-text lh-2" style="font-size: 15px;">Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">APIs</h5>
+          <p class="card-text lh-2" style="font-size: 15px;">With a myriad of HTTP utility methods and middleware at your disposal, creating a robust API is quick and easy.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-6">
+        <div class="card border-0">
+          <div class="card-body">
+            <h5 class="card-title">Performance</h5>
+            <p class="card-text lh-2" style="font-size: 15px;">Express provides a thin layer of fundamental web application features, without obscuring Node.js features that you know and love.</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">Frameworks</h5>
+          <p class="card-text lh-2" style="font-size: 15px;">Many <a class="text-decoration-none">popular frameworks</a> are based on Express.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">How do I define models?</h5>
+          <p class="card-text lh-2" style="font-size: 15px;">Express has no notion of a database. This concept is left up to third-party Node modules, allowing you to interface with nearly any database.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">How can I authenticate users?</h5>
+          <p class="card-text lh-2" style="font-size: 15px;">Authentication is another opinionated area that Express does not venture into. You may use any authentication scheme you wish. For a simple username / password scheme, see this example.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-6">
+        <div class="card border-0">
+          <div class="card-body">
+            <h5 class="card-title">Which template engines does Express support?</h5>
+            <p class="card-text lh-2" style="font-size: 15px;">Express supports any template engine that conforms with the (path, locals, callback) signature. To normalize template engine interfaces and caching, see the consolidate.js project for support.</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">How do I handle 404 responses?</h5>
+          <p class="card-text lh-2" style="font-size: 15px;">In Express, 404 responses are not the result of an error, so the error-handler middleware will not capture them. This behavior is because a 404 response simply indicates the absence of additional work to do;</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-lg-3 col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">Middleware function myLogger</h5>
+          <p class="card-text lh-2" style="font-size: 15px;">Here is a simple example of a middleware function called “myLogger”. This function just prints “LOGGED” when a request to the app passes through it. The middleware function is assigned to a variable named myLogger.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">Middleware function requestTime</h5>
+          <p class="card-text lh-2" style="font-size: 15px;">The app now uses the requestTime middleware function. Also, the callback function of the root path route uses the property that the middleware function adds to req (the request object).</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-6">
+        <div class="card border-0">
+          <div class="card-body">
+            <h5 class="card-title">Middleware function validateCookies</h5>
+            <p class="card-text lh-2" style="font-size: 15px;">Finally, we’ll create a middleware function that validates incoming cookies and sends a 400 response if cookies are invalid. Here’s an example function that validates cookies with an external async service.</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-3 col-sm-6">
+      <div class="card border-0">
+        <div class="card-body">
+          <h5 class="card-title">Configurable middleware</h5>
+          <p class="card-text lh-2" style="font-size: 15px;">If you need your middleware to be configurable, export a function which accepts an options object or other parameters, which, then returns the middleware implementation based on the input parameters.</p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+
+<!--Footer  -->
+
+<div class="container p-2 mx-auto mt-5 mb-5 col-9 ">
+  <p class="lh-1 text-center mt-5" style="font-size:13px ;">Documentation translations provided by <a class="text-decoration-none">StrongLoop/IBM: French, German, Spanish, Italian, Japanese, Russian, Chinese, Traditional Chinese, Korean, Portuguese.</a></p>
+  <p class="lh-1 text-center mb-3" style="font-size:13px ;">Community translation available for: <a class="text-decoration-none">Slovak, Ukrainian, Uzbek, Turkish and Thai.</a></p>
+  <p class="lh-1 text-center mt-1" style="font-size:13px ;"><a class="text-decoration-none">Express</a> is a project of the <a class="text-decoration-none">OpenJS Foundation.Fork the website on GitHub.</a>Copyright © 2017 StrongLoop, IBM, and other expressjs.com contributors.</p>
+  <p class="lh-1 text-center mb-5" style="font-size:13px ;">Creative Commons License This work is licensed under a <a class="text-decoration-none"> Creative Commons Attribution-ShareAlike 3.0 United States License.</a></p>
+
+</div>
+
+  
+
+        
+        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script>
+if(window.innerWidth>768)
+{
+var btn1 = document.getElementById("abc-001");
+btn1.addEventListener("mouseover", function()
+{
+  btn1.click();
+})
+
+var btn2 = document.getElementById("abc-002");
+btn2.addEventListener("mouseover", function()
+{
+  btn2.click();
+})
+
+var btn3 = document.getElementById("abc-003");
+btn3.addEventListener("mouseover", function()
+{
+  btn3.click();
+})
+
+var btn4 = document.getElementById("abc-004");
+btn4.addEventListener("mouseover", function()
+{
+  btn4.click();
+})
+
+var btn5 = document.getElementById("abc-005");
+btn5.addEventListener("mouseover", function()
+{
+  btn5.click();
+})
+}
+
+
+</script>
+
+
+</body>
+</html>
